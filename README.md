@@ -1,6 +1,6 @@
 # Pecunity
 
-A new Flutter project.
+Decentralized currency banking app
 
 ## Getting Started
 
