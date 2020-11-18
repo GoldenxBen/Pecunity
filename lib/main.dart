@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        scaffoldBackgroundColor: Color(0xff333333),
+        scaffoldBackgroundColor: Color(0xff121212),
         // textTheme: TextTheme(),
       ),
       home: HomePage(),
@@ -37,16 +37,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            PecunityLogo(width: 300),
-            SizedBox(height: 146),
-            PecunityTextField(hintText: 'Username'),
-            PecunityTextField(
-              hintText: 'Password',
-              obscureText: true,
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 55),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              PecunityLogo(width: 300),
+              SizedBox(height: 146),
+              PecunityTextField(hintText: 'Username'),
+              SizedBox(height: 15),
+              PecunityTextField(
+                hintText: 'Password',
+                obscureText: true,
+              ),
+              FlatButton(
+                onPressed: () {},
+                child: Text('Forgot Password?'),
+                textColor: Color(0xffE8E7E7),
+              )
+            ],
+          ),
         ),
       ),
     );
